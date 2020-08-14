@@ -7,15 +7,20 @@
   
   <title>Slinfu的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="关于博客的搭建近日又重新搭建了一次个人博客，觉得有必要记录一下如何搭建一个个人博客。    需要环境 Node.js去Node官网下载Node.j：Node.js下载下载node主要是用到它的npm命令当出现以下情况时，证明我们安装好了Node.js    安装cnpm众所周知，npm在国内的下载速度可谓是比得上百度网盘不开会员下载（略微夸张了些，还是比网盘快很多的），因此我们使用淘宝镜像下载cn">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Slinfu的个人博客">
 <meta property="og:url" content="http://yoursite.com/2020/08/14/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/index.html">
 <meta property="og:site_name" content="Slinfu的个人博客">
+<meta property="og:description" content="关于博客的搭建近日又重新搭建了一次个人博客，觉得有必要记录一下如何搭建一个个人博客。    需要环境 Node.js去Node官网下载Node.j：Node.js下载下载node主要是用到它的npm命令当出现以下情况时，证明我们安装好了Node.js    安装cnpm众所周知，npm在国内的下载速度可谓是比得上百度网盘不开会员下载（略微夸张了些，还是比网盘快很多的），因此我们使用淘宝镜像下载cn">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yoursite.com/2020/08/14/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/imgs/nodejs.png">
+<meta property="og:image" content="http://yoursite.com/2020/08/14/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/imgs/%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.png">
 <meta property="article:published_time" content="2020-08-14T15:00:47.128Z">
-<meta property="article:modified_time" content="2020-08-14T15:00:47.128Z">
+<meta property="article:modified_time" content="2020-08-14T16:17:48.390Z">
 <meta property="article:author" content="Slinfu">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/08/14/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/imgs/nodejs.png">
   
     <link rel="alternate" href="/atom.xml" title="Slinfu的个人博客" type="application/atom+xml">
   
@@ -76,7 +81,35 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="关于博客的搭建"><a href="#关于博客的搭建" class="headerlink" title="关于博客的搭建"></a>关于博客的搭建</h1><p>近日又重新搭建了一次个人博客，觉得有必要记录一下如何搭建一个个人博客。  </p>
+<hr>
+<h4 id="需要环境"><a href="#需要环境" class="headerlink" title="需要环境"></a>需要环境</h4><ul>
+<li><p>Node.js<br>去Node官网下载Node.j：<a target="_blank" rel="noopener" href="http://nodejs.cn/download/">Node.js下载</a><br>下载node主要是用到它的npm命令<br>当出现以下情况时，证明我们安装好了Node.js<br><img src="./imgs/nodejs.png" alt="Node.js安装成功" title="Nodejs安装成功">  </p>
+</li>
+<li><p>安装cnpm<br>众所周知，npm在国内的下载速度可谓是比得上百度网盘不开会员下载（略微夸张了些，还是比网盘快很多的），因此我们使用淘宝镜像下载cnpm，加快下载速度。<br>运行命令：<br><code>npm install -g --registry=https://registry.npm.taobao.org</code></p>
+</li>
+<li><p>安装Hexo<br>这里我主要是使用了Hexo去搭建博客，因为Hexo比较流行，在搭建博客过程中就算出错了，在网上也基本能找到解决方法<br>运行命令：<br><code>cnpm install -g hexo-cli</code></p>
+</li>
+</ul>
+<hr>
+<p>至此，所需环境搭建好了。  </p>
+<h4 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h4><h5 id="本地搭建"><a href="#本地搭建" class="headerlink" title="本地搭建"></a>本地搭建</h5><ol>
+<li>先新建一个文件夹用来存放我们的博客数据。  </li>
+<li>在文件夹路径下进入cmd命令，运行代码 <code>hexo init</code> 初始化文件夹。  </li>
+<li>执行 <code>hexo s</code> 命令启动。启动完成后即可在本地地址下查看。  </li>
+</ol>
+<hr>
+<p>至此，本地搭建完成。  </p>
+<h5 id="部署到GitHub"><a href="#部署到GitHub" class="headerlink" title="部署到GitHub"></a>部署到GitHub</h5><ol>
+<li>在GitHub自己的账号下新建一个仓库，仓库名格式须为：<strong>个人github的用户名 + .github.io</strong>  </li>
+<li>在我们刚新建的文件夹路径下去下载 <code>cnpm install --save hexo-deployer-git</code>  </li>
+<li>修改文件夹路径下的<strong>_config.yml</strong>文件<br><img src="./imgs/%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.png" alt="修改配置文件" title="配置文件的修改"><br>其中，<strong>repo: <a target="_blank" rel="noopener" href="https://github.com/Slinfu/Slinfu.github.io.git">https://github.com/Slinfu/Slinfu.github.io.git</a></strong> 是自己的仓库地址。  </li>
+<li>部署远端。<br>运行命令：<br>生成命令：<code>hexo g</code><br>推送命令：<code>hexo d</code>  </li>
+</ol>
+<hr>
+<p>至此，部署完成  </p>
+<p>以上便是我在搭建个人博客中的具体操作。</p>
+
       
     </div>
     <footer class="article-footer">
